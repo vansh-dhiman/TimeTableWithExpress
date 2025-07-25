@@ -1,0 +1,206 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 15px 30px;
+  border-bottom: 2px solid #ddd;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.datetime {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.5;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+.logo > span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.time-date {
+  text-align: right;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.5;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-date p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+.time-date time {
+  display: block;
+  font-size: 14px;
+  color: #444;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile span {
+  font-size: 14px;
+  color: #666;
+}
+
+.profile h5 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+#Adm-Pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+.options{
+    height: 650px;
+    width: 210px;
+    background-color: #fbf9f9;
+}
+.menu {
+  list-style: none;              
+  padding: 0;
+  margin: 0;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu li:hover {
+  background-color: #e0e0e0;
+}
+
+.menu li i img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.current-view{
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.current-view button{
+  height: 70px;
+  width: 170px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  cursor: pointer;
+}
+.current-view img{
+  height: 30px;
+  width: 30px;
+}
+#UPcmg-Evnt{
+  width: 200px;                
+  height: 60px;
+  background-color: #4A90E2;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.options-TTable{
+  display: flex;
+}
+.Time-table{
+  height: 650px;
+  width: 100%;
+}
+.Select-Addbtn select{
+  height: 40px;
+  width: 200px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #e0e0e0;
+}
+.Select-Addbtn button{
+  height: 40px;
+  width: 200px;
+  margin-left: 10px;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  font-size: 19px;
+  background-color: #8a6fbc;
+  color: white;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+ table{
+  height: 523px;
+  width: 98.5%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  text-align: center;
+ }
+ th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+thead th {
+  background-color: #4A90E2;
+  color: white;
+}
+
+tbody th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+

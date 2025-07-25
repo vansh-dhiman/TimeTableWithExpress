@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <title>Dashboard</title>
+</head>
+<body>
+    <div class="logo">
+        <span>Schedule Sync</span>
+        <div class="time-date">
+                <P>Today</p>
+                <time id="current-date"></time>
+                <time id="current-time"></time>   
+        </div>
+        <div class="profile">
+                <span>logged in as</span>
+                <h5 id="adminname">AdminName(Admin)</h5>
+                <img src="" id="Adm-Pic">
+        </div>
+    </div>
+    <div class="options-TTable">
+    <div class="options">
+        <ui class="menu">
+            <li><i class="icon"><img src="https://t3.ftcdn.net/jpg/11/66/56/62/360_F_1166566267_BZIu4htXwuzfb1TcpJQHuKbMKpoIqXAx.jpg"></i>Dashboard</li>
+            <li><i class="icon"><img src="https://img.freepik.com/premium-vector/calendar-icon-vector_942802-557.jpg"></i>Calendar</li>
+            <li><i class="icon"><img src="https://cdn-icons-png.flaticon.com/512/1292/1292849.png"></i>ApproveLeave</li>
+            <li><i class="icon"><img src="https://cdn-icons-png.flaticon.com/512/1159/1159870.png"></i>Inbox</li>
+
+        </ui>
+       <p style="margin-left: 20px; font-size: 18px;">Current view</p>
+        <div class="current-view">
+            <button id="Meetings"><img src="https://www.freeiconspng.com/uploads/meeting-icon-png-presentation-icon-board-meeting-icon-meeting-icon--4.png">Meetings</button>
+            <button id="Scheduling"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6G1Uii64afwxoZqppBCyI36yFnfRMYTXpg&s">Scheduling</button>
+        </div>
+        <button id="UPcmg-Evnt">Upcoming Events</button>
+    </div>
+  <!-- Your layout... -->
+  <div class="Time-table">
+    <h2 style="text-align: center; text-decoration: underline;">Time Table</h2>
+    <div class="Select-Addbtn">
+      <select id="select-teacher">
+        <option value="" disabled selected>Select a teacher</option>
+      </select><!---select-->
+      <button id="ADD-TT">Add Time Table detail</button>
+    </div>
+    <table border="1" id="Table">
+      <thead>
+        <tr>
+          <th>Days/Lec</th>
+          <th>lecture 1</th>
+          <th>lecture 2</th>
+          <th>lecture 3</th>
+          <th>lecture 4</th>
+          <th>lecture 5</th>
+          <th>lecture 6</th>
+          <th>lecture 7</th>
+          <th>lecture 8</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Module script with import -->
+  <script src="/js/dashboard.js"></script>
+
+</body>
+</html>

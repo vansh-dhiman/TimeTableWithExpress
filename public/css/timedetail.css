@@ -1,0 +1,95 @@
+.detail-container{
+    height: 670px;
+    width: 560px;
+    border: 2px solid black;
+    justify-self: center;
+    align-self: center;
+}
+.detail-container h1{
+    margin-left: 10px;
+    color: #6F42C1;
+}
+.detail-container input{
+    margin-left: 10px;
+  background-color: #F3EFFF;
+  border: 1px solid #BFA3E6;
+  color: #333;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 22px;
+}
+.detail-container h2{
+    margin-left: 10px;
+    color: #5936A6;
+}
+#save {
+  background-color: #6F42C1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#save:hover {
+  background-color: #5936A6;
+}
+
+#cancel {
+  background-color: #E0D4F7;
+  color: #6F42C1;
+  border: 1px solid #BFA3E6;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+#cancel:hover {
+  background-color: #D3BAF5;
+}
+.start-end-div{
+    display: flex;
+    margin-top: 40px;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.start-end-div input{
+    height: 20px;
+    width: 100px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btns{
+    margin-top: 30px;
+    float: right;
+    margin-right: 10px;
+}
+select#day {
+  width: 120px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #D3BAF5;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-left: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.day-teacher-div{
+  display: flex;
+  margin-top: 30px;
+}
+select#form-teacher{
+  width: 120px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #D3BAF5;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-left: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/home.css" />
+  <title>Schedule Sync - Home</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Schedule Sync</h1>
+    <p>Select your portal to continue</p>
+
+    <div class="role-box">
+      <select id="role-select">
+        <option value="">-- Choose Role --</option>
+        <option value="teacher">Teacher</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button id="open-btn">Open</button>
+    </div>
+  </div>
+  <script >
+    document.getElementById("open-btn").addEventListener("click", () => {
+  const role = document.getElementById("role-select").value;
+  if (role === "teacher") {
+      window.location.href = "signup.html";
+  } else if (role === "admin") {
+    window.location.href = "login.html";
+  } else {
+    alert("Please select a role before continuing.");
+  }
+});
+
+  </script>
+</body>
+</html>

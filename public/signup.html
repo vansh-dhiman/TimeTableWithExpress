@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/signup.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="Sformbox">
+        
+        <h2>username</h2>    
+        <input type="username" placeholder="Set an username" id="SUname">
+        <h2>Email</h2>
+        <input type="text" name="email" id="Smail" placeholder="enter your email...">
+        <h2>Phone</h2>
+        <input type="tel" placeholder="91+" name="mobile" id="mobile"   pattern="[0-9]{10}" maxlength="10" required>
+        <h2>Password</h2>
+        <input type="password" placeholder="Set a password" name="Spass" id="Spass">
+         <div id="role-container">
+        <input type="checkbox" id="admin"><h2>Admin</h2>
+        <input type="checkbox" id="teacher"><h2>Teacher</h2>
+        </div>
+        <button id="signup">signup</button>
+        <a href="login.html" style="font-size: 22px;">Already have account?..</a>
+    </form>
+    <script src="/js/signup.js"></script>
+</body>
+</html>

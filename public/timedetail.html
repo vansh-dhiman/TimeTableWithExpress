@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/timedetail.css" />
+  <title>Add Time Table</title>
+</head>
+<body>
+  <div class="detail-container">
+    <h1>Add Time Table Detail</h1>
+    <h2>Lecture number</h2>
+    <input type="text" id="lecture" />
+    <h2>Subject Name</h2>
+    <input type="text" id="subject" />
+    <div class="start-end-div">
+      <h2>Start Time</h2>
+      <input type="time" id="start-time" />
+      <h2>End Time</h2>
+      <input type="time" id="end-time" />
+    </div>
+    <h2>Room Number</h2>
+    <input type="text" id="room" />
+  <div class="day-teacher-div">
+    <h2>Day</h2>
+    <select id="day">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+    </select>
+     <!-- <h2>Teacher</h2>
+    <select id="form-teacher">
+      <option value="">select </option>
+    </select> -->
+  </div>
+    <div class="btns">
+      <button id="cancel">Cancel</button>
+      <button id="save">Save</button>
+    </div>
+  </div>
+
+  <!-- Module script -->
+  <script type="module" src="/js/timedetail.js"></script>
+</body>
+</html>

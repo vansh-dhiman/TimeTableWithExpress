@@ -1,0 +1,174 @@
+[
+  {
+    "userName": "vansh",
+    "Email": "vanshmehle004@gmail.com",
+    "password": "123",
+    "mobile": "123456789",
+    "role": "teacher",
+    "timetable": [
+      {
+        "lecture": "hii",
+        "subject": "hii",
+        "starttime": "08:59",
+        "endtime": "09:59",
+        "room": "hii",
+        "day": "Monday"
+      },
+      {
+        "lecture": "1",
+        "subject": "dfgnls",
+        "starttime": "23:02",
+        "endtime": "23:24",
+        "room": "242424",
+        "day": "Tuesday"
+      },
+      {
+        "lecture": "eujfme",
+        "subject": "eoeo",
+        "starttime": "06:23",
+        "endtime": "08:59",
+        "room": "gigo",
+        "day": "Wednesday"
+      },
+      {
+        "lecture": "3",
+        "subject": "dmolmfl",
+        "starttime": "04:39",
+        "endtime": "08:59",
+        "room": "123",
+        "day": "Monday"
+      },
+      {
+        "lecture": "8",
+        "subject": "234567",
+        "starttime": "12:32",
+        "endtime": "23:04",
+        "room": "1223445678",
+        "day": "Wednesday"
+      }
+    ]
+  },
+  {
+    "userName": "rohan",
+    "Email": "rohan@gmail.com",
+    "password": "123",
+    "mobile": "1234768903",
+    "role": "teacher",
+    "timetable": [
+      {
+        "lecture": "8",
+        "subject": "java",
+        "starttime": "1",
+        "endtime": "2",
+        "room": "room2",
+        "day": "Monday"
+      },
+      {
+        "lecture": "1",
+        "subject": "b++",
+        "starttime": "12:12",
+        "endtime": "21:11",
+        "room": "rohan",
+        "day": "Monday"
+      },
+      {
+        "lecture": "1",
+        "subject": "skfkw",
+        "starttime": "22:33",
+        "endtime": "13:01",
+        "room": "room2",
+        "day": "Tuesday"
+      }
+    ]
+  },
+  {
+    "userName": "roshni",
+    "Email": "roshni@gmail.com",
+    "password": "123",
+    "mobile": "1234768903",
+    "role": "teacher",
+    "timetable": [
+      {
+        "lecture": "3333",
+        "subject": "java",
+        "starttime": "10",
+        "endtime": "11",
+        "room": "room2",
+        "day": "Wednesday"
+      },
+      {
+        "lecture": "6",
+        "subject": "java",
+        "starttime": "10",
+        "endtime": "11",
+        "room": "room1",
+        "day": "Tuesday"
+      },
+      {
+        "lecture": "1",
+        "subject": "hhhhhhhhhhhhhh",
+        "starttime": "13:12",
+        "endtime": "12:12",
+        "room": "121",
+        "day": "Tuesday"
+      }
+    ]
+  },
+  {
+    "userName": "rahul",
+    "Email": "rahul@gmail.com",
+    "password": "123",
+    "mobile": "1234567832",
+    "role": "teacher"
+  },
+  {
+    "userName": "archita",
+    "Email": "archita@gmail.com",
+    "password": "123",
+    "mobile": "1234567890",
+    "role": "teacher",
+    "timetable": [
+      {
+        "lecture": "5",
+        "subject": "java",
+        "starttime": "14:14",
+        "endtime": "15:12",
+        "room": "room2",
+        "day": "Monday"
+      },
+      {
+        "lecture": "123456789",
+        "subject": "fghjk",
+        "starttime": "17:15",
+        "endtime": "18:11",
+        "room": "123",
+        "day": "Monday"
+      },
+      {
+        "lecture": "7",
+        "subject": "java",
+        "starttime": "17:11",
+        "endtime": "18:11",
+        "room": "123",
+        "day": "Friday"
+      }
+    ]
+  },
+  {
+    "userName": "admin",
+    "Email": "admin@gmail.com",
+    "password": "123",
+    "mobile": "3456897686",
+    "role": "admin",
+    "timetable": [
+      {
+        "lecture": "5",
+        "subject": "hello",
+        "starttime": "04:34",
+        "endtime": "04:24",
+        "room": "hello12",
+        "day": "Wednesday"
+      }
+    ]
+  }
+]
