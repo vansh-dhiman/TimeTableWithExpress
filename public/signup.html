@@ -17,10 +17,17 @@
         <input type="tel" placeholder="91+" name="mobile" id="mobile"   pattern="[0-9]{10}" maxlength="10" required>
         <h2>Password</h2>
         <input type="password" placeholder="Set a password" name="Spass" id="Spass">
-         <div id="role-container">
+        <div id="role-container">
+        <input type="radio" id="admin" name="role" value="admin">
+        <label for="admin"><h2>Admin</h2></label>
+
+        <input type="radio" id="teacher" name="role" value="teacher">
+        <label for="teacher"><h2>Teacher</h2></label>
+      </div>
+         <!-- <div id="role-container">
         <input type="checkbox" id="admin"><h2>Admin</h2>
         <input type="checkbox" id="teacher"><h2>Teacher</h2>
-        </div>
+        </div> -->
         <button id="signup">signup</button>
         <a href="login.html" style="font-size: 22px;">Already have account?..</a>
     </form>

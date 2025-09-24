@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Chat with Admin</title>
+  <link rel="stylesheet" href="/css/teacher-chat.css" />
+</head>
+<body>
+  <div class="outer">
+  <div class="chat-container">
+    <h2>Adjustment requests</h2>
+
+    <div class="chat-box" id="chatBox">
+      <!-- Sample messages -->
+      <div class="message-admin-message">
+        <p id="admin-message">...........</p>
+      </div>
+      <!-- <div class="message-teacher-message">
+        <p id="teacher-message">...........</p>
+      </div> -->
+    </div>
+    </div>
+<!-- 
+    <form class="chat-input-area" id="chatForm">
+      <input type="text" id="messageInput" placeholder="Type your message..." required />
+      <button type="submit">Send</button>
+    </form>
+  </div> -->
+
+  <div class="chat-div">
+    <h2>Chat with Admin</h2>
+          <div class="chatBox"></div>
+              <!-- <div class="admin-msg-div">
+                 <p id="admin-msg-para"></p>
+              </div>
+              <div class="teacher-msg-div">
+                <p id="admin-msg-para"></p>
+              </div>
+              <div> -->
+              <input type="text" id="teacher-input" placeholder="Type your msg" required/>
+              <button id="submit">send</button>
+              </div>
+  </div>
+
+</div>
+<script src="/socket.io/socket.io.js"></script>
+  <script src="/js/teacher-chat.js"></script>
+</body>
+</html>

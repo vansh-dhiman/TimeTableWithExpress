@@ -295,6 +295,31 @@ tbody th {
   background-color: #D3BAF5;
   transform: scale(1.03);
 }
+#status{
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+}
+#logout-btn {
+  padding: 5px 12px;
+  background-color: #E6E6FA; /* Lavender */
+  color: #4B0082; /* Deep purple text */
+  border: 1px solid #D8BFD8;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background-color: #f0e6ff;
+  box-shadow: 0 4px 10px rgba(100, 0, 150, 0.15);
+}
+
 
 
 

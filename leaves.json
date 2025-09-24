@@ -1,0 +1,16 @@
+[
+  {
+    "leaveId": "archita@gmail.com",
+    "fromDate": "1121-12-12",
+    "toDate": "0001-12-12",
+    "reason": "1212",
+    "status": "APROVED"
+  },
+  {
+    "leaveId": "kuldeep@gmail.com",
+    "fromDate": "1311-12-12",
+    "toDate": "0013-12-13",
+    "reason": "dfdfdgsfghjhdfgsaas",
+    "status": "REJECTED"
+  }
+]

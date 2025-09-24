@@ -5,15 +5,36 @@ function updateDateTime() {
   document.getElementById("current-date").textContent = now.toLocaleDateString();
   document.getElementById("current-time").textContent = now.toLocaleTimeString();
 }
-
+ let loginEmail = null;
 document.addEventListener('DOMContentLoaded', () => {
-  const params = new URLSearchParams(window.location.search);
-  const loginEmail = params.get("loginEmail");
-  console.log("Login Email:", loginEmail);
+  // const params = new URLSearchParams(window.location.search);
+  // const loginEmail = params.get("loginEmail");
+  // console.log("Login Email:", loginEmail);
 
+ const logout = document.getElementById('logout-btn');
+    logout.addEventListener('click',async()=>{
+      try{
+        const res = await fetch('/logout',{
+          method:'GET',
+          credentials:'include'
+        });
+        if(!res.ok){
+          alert('error in res');
+          return;
+        }
+        alert('you have been logged out');
+        window.location.href='/login';
+      }catch(err){
+        alert('failed to fetch');
+      }
+    })
+    
   updateDateTime(); // initial run
   setInterval(updateDateTime, 1000);
-  loadTeacherdata(loginEmail);
+  loadTeacherdata();
+
+  let leaveStatus = document.getElementById('leaveStatus');
+  // checkstatus(loginEmail);
 
   let navigationbar = document.querySelector(".menu");
   navigationbar.addEventListener('click',(e)=>{
@@ -25,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const clickedText = clickedLi.textContent.trim();
           switch(clickedText){
             case 'dashboard':
-              window.location.href = "/dashboard"
+                window.location.href = '/adjustmentRequest.html';
+
               break;
 
               case 'calander':
@@ -35,11 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
                case 'RequestLeave':
                 // window.location.href = '/leave';
                 console.log('leave h');
-                requestForLeave();
+                requestForLeave(loginEmail);
                    break;
 
                  case 'Inbox':
                    window.location.href = '/inbox';
+                 break;
+
+                 case 'adjustmentRequests':
+                   window.location.href = '/getteacher_chatpage';
                  break;
 
                 default:
@@ -50,63 +76,72 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-async function loadTeacherdata(loginEmail) {
+async function loadTeacherdata() {
   try {
-    const response = await fetch('/teacherpage/teacherdata');
+    const response = await fetch('/teacherdata', {
+      method: 'POST'
+      // headers: {
+      //   "Content-Type": "application/json"
+      // },
+      // body: JSON.stringify({  }) 
+    });
+
     if (!response.ok) {
       console.error('Failed to fetch');
       return;
     }
 
-    const data = await response.json();
-    const teachers = Array.isArray(data) ? data : (data.teachers || []);
-    const teacher = teachers.find(t => t.Email?.toLowerCase() === loginEmail?.toLowerCase());
+    const text = await response.text();
+console.log('Raw server response:', text);
 
-    if (teacher) {
-          let profile_name_of_user = document.querySelector('#teachername');
-          profile_name_of_user.textContent = teacher.userName;
+const data = JSON.parse(text);
 
-      const dayArr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-      const tbody = document.querySelector("table tbody");
-      tbody.innerHTML = "";
+    const timetabledata = Array.isArray(data.timetable) ? data.timetable : [];
+    const teacherName = data.userName;
+    loginEmail = data.loginEmail;
 
-      dayArr.forEach(day => {
-        const tr = document.createElement("tr");
-        const th = document.createElement("th");
-        th.textContent = day;
-        tr.appendChild(th);
 
-        for (let i = 1; i <= 8; i++) {
-        //   console.log("Checking", day, "Lecture:", i);
-          const td = document.createElement("td");
+    // const profile_name_of_user = document.querySelector('#teachername');
+    // profile_name_of_user.textContent = teacherName;
 
-          const match = teacher.timetable?.find(item =>
-            item.day === day && String(item.lecture) === String(i)
-          );
 
-          console.log("Match result:", match);
+    const dayArr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const tbody = document.querySelector("table tbody");
+    tbody.innerHTML = "";
 
-          if (match) {
-            console.log("matched");
-            td.innerHTML = `
-              <b>${match.subject}</b><br>
-              <small>${match.starttime} - ${match.endtime}</small><br> 
-              <small>Room: ${match.room}</small>
-            `;
-          }
+    dayArr.forEach(day => {
+      const tr = document.createElement("tr");
+      const th = document.createElement("th");
+      th.textContent = day;
+      tr.appendChild(th);
 
-          tr.appendChild(td);
+      for (let i = 1; i <= 8; i++) {
+        const td = document.createElement("td");
+
+        const match = timetabledata.find(item =>
+          item.day === day && String(item.lecture) === String(i)
+        );
+
+        if (match) {
+          td.innerHTML = `
+            <b>${match.subject}</b><br>
+            <small>${match.starttime} - ${match.endtime}</small><br> 
+            <small>Room: ${match.room}</small>
+          `;
         }
 
-        tbody.appendChild(tr);
-      });
-    }
+        tr.appendChild(td);
+      }
+
+      tbody.appendChild(tr);
+    });
+
   } catch (err) {
-    console.log("server error:", err);
+    console.log("Server error:", err);
   }
 }
 
-function requestForLeave() {
+function requestForLeave(loginEmail) {
   let TimeTable = document.querySelector(".Time-table");
   TimeTable.style.display = "none";
 
@@ -160,31 +195,48 @@ function requestForLeave() {
     TimeTable.style.display = "block";
   });
 
-  submitBtn.addEventListener("click", () => {
+  submitBtn.addEventListener("click", async() => {
     const fromDate = document.getElementById("from-date").value;
     const toDate = document.getElementById("to-date").value;
     const reason = document.getElementById("reason").value;
 
-    if (!fromDate || !toDate || !reason.trim()) {
+    if (!loginEmail||!fromDate || !toDate || !reason.trim()) {
       alert("Please fill all fields!");
       return;
     }
-
-    console.log("Leave Request Submitted:");
-    console.log("From:", fromDate);
-    console.log("To:", toDate);
-    console.log("Reason:", reason);
-
-    // TODO: send to backend with fetch if needed
-    // fetch('/submitLeave', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ fromDate, toDate, reason, loginEmail })
-    // });
-
-    alert("Leave request submitted!");
-    document.body.removeChild(leaveBox);
-    TimeTable.style.display = "block";
+     
+    const formData ={
+       email:loginEmail,
+       fromDate:fromDate,
+        toDate:toDate,
+        reason:reason,
+        status:"PENDING"
+       }; 
+       
+    try{
+     const leaveResp = await fetch('/submitLeave',{
+        method:"POST",
+        headers: {
+              "Content-Type": "application/json"
+        },
+        body:JSON.stringify({formData})
+     });
+     if(!leaveResp.ok){
+      console.log('error in leaveRes');
+      alert("failed to submit leave");
+     }else{
+      const data = await leaveResp.json();
+      console.log('leaveRes:',data);
+      leaveStatus.src="https://cdn-icons-png.flaticon.com/512/1027/1027650.png"
+      alert("Leave request submitted!");
+      document.body.removeChild(leaveBox);
+      TimeTable.style.display = "block";
+     }
+     
+    }catch(err){
+      console.log("failed to fetch",err);
+      alert("failed to fetch");
+    }
   });
 
   // Create & append form fields
@@ -199,3 +251,4 @@ function requestForLeave() {
   leaveBox.appendChild(leaveContent);
   document.body.appendChild(leaveBox);
 }
+

@@ -72,6 +72,25 @@
   object-fit: cover;
   border: 2px solid #ccc;
 }
+#logout-btn {
+  padding: 5px 12px;
+  background-color: #E6E6FA; /* Lavender */
+  color: #4B0082; /* Deep purple text */
+  border: 1px solid #D8BFD8;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background-color: #f0e6ff;
+  box-shadow: 0 4px 10px rgba(100, 0, 150, 0.15);
+}
+
 .options{
     height: 650px;
     width: 210px;
@@ -204,3 +223,120 @@ tbody th {
 }
 
 
+/* Approve Leave Heading */
+.approve-heading {
+  color: #6f42c1;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Main Container for Leave Cards */
+#approve-leave-container {
+  background-color: #f3eaff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(111, 66, 193, 0.2);
+}
+
+/* Individual Leave Card */
+.leave-card {
+  background-color: #ffffff;
+  border-left: 5px solid #b497ff;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(111, 66, 193, 0.1);
+  transition: transform 0.2s;
+}
+
+.leave-card:hover {
+  transform: scale(1.01);
+}
+
+/* Buttons */
+.btn-approve, .btn-reject, .btn-adjustment{
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.btn-approve {
+  background-color: #28a745; /* Green */
+  margin-right: 10px;
+  color: white;
+  border: none;
+}
+
+.btn-adjustment {
+  background-color: #17a2b8; /* Teal */
+  margin-left: 10px;
+  color: white;
+  border: none;
+}
+
+.btn-reject {
+  background-color: #dc3545; /* Coral Red */
+  color: white;
+  border: none;
+}
+
+/* Hover effects */
+.btn-approve:hover {
+  background-color: #218838; /* Darker green */
+}
+
+.btn-adjustment:hover {
+  background-color: #138496; /* Darker teal */
+}
+
+.btn-reject:hover {
+  background-color: #c82333; /* Darker coral */
+}
+
+.back-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px; /* space between back button and heading */
+  margin-bottom: 20px;
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}
+
+.approve-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6f42c1;
+  margin: 0;
+}
+.back-heading{
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+/* Paragraphs inside card */
+.leave-card p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #444;
+}

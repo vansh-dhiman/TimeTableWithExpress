@@ -79,7 +79,7 @@ const loginEmail = params.get("loginEmail");
   }
 
   // Object bana rahe hain jo server ko bhejna hai
-  const timetableEntry = { lecture, subject, starttime, endtime, room, day, selectedTeacher,loginEmail };
+  const timetableEntry = { lecture, subject, starttime, endtime, room, day, selectedTeacher};
 
   try {
     const response = await fetch("/timedetail/save", {
@@ -90,7 +90,7 @@ const loginEmail = params.get("loginEmail");
 
     const result = await response.json();
     alert(result.message || "Saved!");
-     const url = `/dashboard?loginEmail=${encodeURIComponent(loginEmail)}&selectedTeacher=${encodeURIComponent(selectedTeacher)}`;
+     const url = `/dashboard?selectedTeacher=${encodeURIComponent(selectedTeacher)}`;
      window.location.href = url;
 
   } catch (err) {
@@ -134,5 +134,5 @@ const loginEmail = params.get("loginEmail");
 
 
 // document.addEventListener('DOMContentLoaded', () => {
-//     loadFormOptions();                 // dropdown fill
+//     loadFormOptions();                 
 //   });

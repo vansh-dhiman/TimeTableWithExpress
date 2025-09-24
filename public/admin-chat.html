@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Chat with Teacher</title>
+  <link rel="stylesheet" href="/css/admin-chat.css">
+</head>
+<body>
+
+  <!-- Teacher List Sidebar -->
+  <div class="teacher-list">
+    <h3>Teachers</h3>
+    <div id="teacherList">
+      <!-- Teacher list will be filled dynamically -->
+    </div>
+  </div>
+
+  <!-- Chat Area -->
+  <div class="chat-container">
+    <h2>Chat with <span id="chatName">[Teacher Name]</span></h2>
+
+    <div class="chat-box" id="chatBox">
+      <!-- Messages will appear here -->
+    </div>
+    <div class="adminMsg">
+
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Type your message..." />
+      <button id="sendBtn" class="send-btn">Send</button> 
+      <button id="Asign">Asign</button>
+    </div>
+  </div>
+<script src="/socket.io/socket.io.js"></script>
+  <script src="/js/admin-chat.js"></script>
+</body>
+</html>

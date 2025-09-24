@@ -2,7 +2,7 @@
   {
     "userName": "vansh",
     "Email": "vanshmehle004@gmail.com",
-    "password": "123",
+    "password": "1",
     "mobile": "123456789",
     "role": "teacher",
     "timetable": [
@@ -70,6 +70,14 @@
         "endtime": "21:11",
         "room": "rohan",
         "day": "Monday"
+      },
+      {
+        "lecture": "1",
+        "subject": "skfkw",
+        "starttime": "22:33",
+        "endtime": "13:01",
+        "room": "room2",
+        "day": "Tuesday"
       },
       {
         "lecture": "1",
@@ -157,7 +165,7 @@
   {
     "userName": "admin",
     "Email": "admin@gmail.com",
-    "password": "123",
+    "password": "1",
     "mobile": "3456897686",
     "role": "admin",
     "timetable": [
@@ -170,5 +178,19 @@
         "day": "Wednesday"
       }
     ]
+  },
+  {
+    "userName": "ankit",
+    "Email": "ankit@gmail.com",
+    "password": "123",
+    "mobile": "7826812648",
+    "role": "teacher"
+  },
+  {
+    "userName": "kuldeep",
+    "Email": "kuldeep@gmail.com",
+    "password": "1",
+    "mobile": "7623897263",
+    "role": "teacher"
   }
 ]

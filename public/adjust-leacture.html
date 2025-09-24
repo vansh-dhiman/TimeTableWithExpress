@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture Adjustment</title>
+  <link rel="stylesheet" href="/css/adjust-lecture.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>Lecture Adjustment Panel</h2>
+
+    <!-- Box showing the lecture needing adjustment -->
+    <div class="lecture-box">
+      <div class="lecture-details">
+        <p><strong>Subject:</strong> <span id="lectureSubject">Mathematics</span></p>
+        <p><strong>Time:</strong> <span id="lectureTime">10:00 - 11:00 AM</span></p>
+        <p><strong>Lecture No.:</strong> <span id="lectureNo">2</span></p>
+        <p><strong>Day:</strong> <span id="lectureDay">Wednesday</span></p>
+        <p><strong>Replacing Teacher:</strong> <span id="replacingTeacher">Mr. Sharma</span></p>
+      </div>
+    </div>
+
+    <!-- Free teachers area -->
+    <h3>Available Teachers</h3>
+    <div id="freeTeachersContainer">
+      <!-- Cards will be added here dynamically via JS -->
+    </div>
+
+    <!-- Buttons -->
+    <div style="text-align: center;">
+      <button id="prevLectureBtn">Previous</button>
+      <button id="nextLectureBtn">Next</button>
+      <button id="assignLectureBtn">Assign Lecture</button>
+      <button id="backBtn">Back</button>
+    </div>
+
+  </div>
+
+  <script src="/js/adjust-lecture.js"></script>
+</body>
+</html>
